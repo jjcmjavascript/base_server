@@ -1,5 +1,5 @@
-const Home = require('./Home.js');
+const User = require('./User.js');
 
 module.exports = [
-    ...Home
+    ...User
 ];

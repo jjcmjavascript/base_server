@@ -1,8 +1,6 @@
-const Express = require('express');
-const Routes  = require('../Routes/Index.js')
-
 class Server {
     constructor(Express, routes, port){
+        this.express = Express;
         this.server = Express();
         this.router = Express.Router();
         this.port = port;
@@ -10,7 +8,7 @@ class Server {
     }
 
     init(){
-        this.setMiddlewares([Express.json(), Express.urlencoded({ extended: true}) ]);
+        this.setMiddlewares([this.express.json(),this.express.urlencoded({ extended: true}) ]);
         this.setRoutes();
         this.server.listen(this.port)
     }
@@ -30,4 +28,4 @@ class Server {
 
 }
 
-module.exports = (new Server(Express, Routes, 3000));
+module.exports = Server;

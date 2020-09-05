@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "pagina web vender fotos ",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "start",
+    "start": "nodemon main.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "crud",
+    "pics",
+    "photo",
+    "gagolio"
+  ],
+  "author": "itsnotjs",
+  "license": "ISC"
+}
